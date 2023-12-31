@@ -30,7 +30,7 @@ const RegisterScreen = () => {
     };
 
     axios
-      .post("http://172.20.10.2:3000/register", user)
+      .post("http://192.168.56.1:3000/register", user)
       .then((response) => {
         console.log(response);
         Alert.alert(
@@ -53,10 +53,10 @@ const RegisterScreen = () => {
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollViewContainer}>
         <View style={styles.logoContainer}>
-        <Image
-        style={styles.logo}
-        source={require('../assets/EzTalk_Logo01.png')} // Replace 'your-image-name.png' with the actual file name
-      />
+          <Image
+            style={styles.logo}
+            source={require('../assets/EzTalk_Logo01.png')} // Replace 'your-image-name.png' with the actual file name
+          />
         </View>
         <KeyboardAvoidingView>
         <View style={styles.titleContainer}>

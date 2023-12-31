@@ -13,7 +13,7 @@ const ProfileScreen = () => {
     const fetchProfile = async () => {
       try {
         const response = await axios.get(
-          `http://172.20.10.2:3000/profile/${userId}`
+          `http://192.168.56.1:3000/profile/${userId}`
         );
         const { user } = response.data;
         setUser(user);
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
     borderBottomWidth: 2,
-    borderBottomColor: '#FAB713', // Theme color for the border
+    borderBottomColor: 'turquoise', // Theme color for the border
   },
   userName: {
     fontSize: 22,
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     paddingVertical: 4,
     borderRadius: 15,
-    backgroundColor: '#FAB713', // Theme color for the badge
+    backgroundColor: 'turquoise', // Theme color for the badge
     marginTop: 8, // Add space above the badge if needed
   },
   profileSection: {
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 50,
     resizeMode: 'cover',
-    borderColor: '#FAB713', // Theme color for the image border
+    borderColor: 'turquoise', // Theme color for the image border
     borderWidth: 2,
   },
   userInfo: {
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 25,
-    borderColor: '#FAB713',
+    borderColor: 'turquoise',
     borderWidth: 1,
     backgroundColor: 'transparent',
   },
@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   buttonPressed: {
-    backgroundColor: '#FAB713', // Yellow color for the pressed state
+    backgroundColor: 'turquoise', // Yellow color for the pressed state
   },
 });
 

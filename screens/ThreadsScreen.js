@@ -26,7 +26,7 @@ const ThreadsScreen = () => {
 
     if (content) {
       axios
-        .post("http://172.20.10.2:3000/create-post", postData)
+        .post("http://192.168.56.1:3000/create-post", postData)
         .then((response) => {
           setContent("");
         })
@@ -53,7 +53,7 @@ const ThreadsScreen = () => {
           style={styles.input}
           value={content}
           onChangeText={setContent}
-          placeholderTextColor={"#FAB713"}
+          placeholderTextColor={"turquoise"}
           placeholder="Type your message..."
           multiline
         />
@@ -97,11 +97,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#1E1E1E', // Slightly lighter dark shade for input
     borderRadius: 5,
     padding: 10,
-    borderColor: '#FAB713', // Accent color for border
+    borderColor: 'turquoise', // Accent color for border
     borderWidth: 1,
   },
   button: {
-    backgroundColor: '#FAB713', // Accent color for the button
+    backgroundColor: 'turquoise', // Accent color for the button
     padding: 15,
     marginTop: 20,
     alignSelf: "center",

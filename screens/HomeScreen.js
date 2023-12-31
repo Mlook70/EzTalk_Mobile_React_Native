@@ -34,7 +34,7 @@ const HomeScreen = () => {
 
   const fetchPosts = async () => {
     try {
-      const response = await axios.get("http://172.20.10.2:3000/get-posts");
+      const response = await axios.get("http://192.168.56.1:3000/get-posts");
       setPosts(response.data);
     } catch (error) {
       console.log("error fetching posts", error);
@@ -45,7 +45,7 @@ const HomeScreen = () => {
   const handleLike = async (postId) => {
     try {
       const response = await axios.put(
-        `http://172.20.10.2:3000/posts/${postId}/${userId}/like`
+        `http://192.168.56.1:3000/posts/${postId}/${userId}/like`
       );
       const updatedPost = response.data;
 
@@ -62,7 +62,7 @@ const HomeScreen = () => {
   const handleDislike = async (postId) => {
     try {
       const response = await axios.put(
-        `http://172.20.10.2:3000/posts/${postId}/${userId}/unlike`
+        `http://192.168.56.1:3000/posts/${postId}/${userId}/unlike`
       );
       const updatedPost = response.data;
       // Update the posts array with the updated post
@@ -81,7 +81,7 @@ const HomeScreen = () => {
       <View style={styles.logoContainer}>
       <Image
         style={styles.logo}
-        source={require('../assets/EzTalk.png')} // Replace 'your-image-name.png' with the actual file name
+        source={require('../assets/EzTalk_Logo01.png')} // Replace 'your-image-name.png' with the actual file name
       />
       </View>
 

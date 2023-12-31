@@ -28,7 +28,7 @@ const ActivityScreen = () => {
       setUserId(userId);
 
       axios
-        .get(`http://172.20.10.2:3000/user/${userId}`)
+        .get(`http://192.168.56.1:3000/user/${userId}`)
         .then((response) => {
           setUsers(response.data);
         })
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 30,
     borderRadius: 25,
-    borderColor: '#FAB713', // Theme color for the button border
+    borderColor: 'turquoise', // Theme color for the button border
     borderWidth: 1,
     backgroundColor: 'transparent',
   },
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   selectedButton: {
-    backgroundColor: '#FAB713',
+    backgroundColor: 'turquoise',
     borderWidth: 4, // More pronounced border for selected button
     borderColor: '#FFFFFF', // White border for selected button
   },
